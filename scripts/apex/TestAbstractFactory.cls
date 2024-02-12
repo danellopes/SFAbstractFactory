@@ -1,3 +1,10 @@
 HotDrinkMachine machine = new HotDrinkMachine();
-IHotDrink drink = machine.makeDrink(HotDrinkMachine.AvailableDrink.Tea, 100);
+
+System.debug('Available drinks: ');
+for(String drink : machine.getAvailableDrinks())
+{
+    System.debug(drink);
+}
+
+IHotDrink drink = machine.makeDrink('Tea', 100);
 drink.consume();
